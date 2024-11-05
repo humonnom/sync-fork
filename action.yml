@@ -5,9 +5,25 @@ branding:
   icon: git-merge
   color: yellow
 
+inputs:
+  upstream_repository_owner:
+    description: 'Owner of the upstream repository'
+    required: true
+  upstream_repository_name:
+    description: 'Name of the upstream repository'
+    required: true
+  forked_repository_owner:
+    description: 'Owner of the forked repository'
+    required: true
+  forked_repository_name:
+    description: 'Name of the forked repository'
+    required: true
+
 runs:
   using: "composite"
   steps:
-    - name: "Echo"
-      shell: bash  # shell 속성 추가
-      run: echo "It works!"
+    - name: "Print Repository Information"
+      shell: bash
+      run: |
+        echo "Upstream Repository: ${{ inputs.upstream_repository_owner }}/${{ inputs.upstream_repository_name }}"
+        echo "Forked Repository: ${{ inputs.forked_repository_owner }}/${{ inputs.forked_repository_name }}"
