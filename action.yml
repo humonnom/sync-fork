@@ -1,4 +1,4 @@
-name: auto sync forked repo
+name: Auto sync forked repo
 description: Automatically synchronize the original repo with the forked repo.
 
 branding:
