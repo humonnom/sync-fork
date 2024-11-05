@@ -1,0 +1,17 @@
+name: sync-fork
+description: Sync organization repos with personal repos.
+
+branding:
+  icon: git-merge
+  color: yellow
+
+inputs:
+  # 입력값
+    
+outputs:
+  # 출력값
+    
+runs:
+  using: "composite"
+  steps:
+    echo "It works!"
