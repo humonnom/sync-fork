@@ -12,18 +12,14 @@ inputs:
   upstream_repository_name:
     description: 'Name of the upstream repository'
     required: true
-  forked_repository_owner:
-    description: 'Owner of the forked repository'
-    required: true
-  forked_repository_name:
-    description: 'Name of the forked repository'
-    required: true
 
 runs:
   using: "composite"
   steps:
-    - name: "Print Repository Information"
-      shell: bash
+    - name: "Fetch Upstream"
       run: |
-        echo "Upstream Repository: ${{ inputs.upstream_repository_owner }}/${{ inputs.upstream_repository_name }}"
-        echo "Forked Repository: ${{ inputs.forked_repository_owner }}/${{ inputs.forked_repository_name }}"
+          git remote add upstream https://github.com/${{ inputs.upstream_repository_owner }}/${{ inputs.upstream_repository_name  }}.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main
