@@ -5,13 +5,14 @@ branding:
   icon: git-merge
   color: yellow
 
-inputs:
+# inputs:
   # 입력값
     
-outputs:
+# outputs:
   # 출력값
     
 runs:
   using: "composite"
   steps:
-    echo "It works!"
+    - name: "Echo"
+      run: echo "It works!"
