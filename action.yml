@@ -1,5 +1,5 @@
-name: sync-fork
-description: Sync organization repos with personal repos.
+name: auto sync forked repo
+description: Automatically synchronize the original repo with the forked repo.
 
 branding:
   icon: git-merge
