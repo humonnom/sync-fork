@@ -2,7 +2,7 @@
 
 ## 개요
 
-이 GitHub Action은 포크된 저장소를 원본(upstream) 저장소와 자동으로 동기화하는 간편한 도구입니다. [humonnom/dispatch-event](https://github.com/marketplace/actions/trigger-event-to-sync)와 함께 사용하면 원본 레포지토리의 변경사항이 액션을 트리거 하도록 설정할 수 있습니다.
+이 GitHub Action은 포크된 저장소를 원본(upstream) 저장소와 자동으로 동기화하는 간편한 도구입니다. 직접 [Github 이벤트](https://docs.github.com/ko/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)를 사용하거나 [humonnom/dispatch-event](https://github.com/marketplace/actions/trigger-event-to-sync)를 함께 사용하면 원본 레포지토리의 변경사항이 액션을 트리거 하도록 설정할 수 있습니다.
 
 ## 기능
 
@@ -54,7 +54,7 @@ name: Sync Forked Repository
 
 on:
   repository_dispatch:
-    types: [main_updated]
+    types: [main_updated]  # 수동 트리거 옵션
 
 jobs:
   sync:
