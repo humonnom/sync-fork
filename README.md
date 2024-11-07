@@ -2,7 +2,7 @@
 
 ## 개요
 
-이 GitHub Action은 포크된 저장소를 원본(upstream) 저장소와 자동으로 동기화하는 간편한 도구입니다. [](https://github.com/marketplace/actions/trigger-event-to-sync)와 함께 사용하면 원본 레포지토리의 변경사항이 액션을 트리거 하도록 설정할 수 있습니다.
+이 GitHub Action은 포크된 저장소를 원본(upstream) 저장소와 자동으로 동기화하는 간편한 도구입니다. [humonnom/dispatch-event](https://github.com/marketplace/actions/trigger-event-to-sync)와 함께 사용하면 원본 레포지토리의 변경사항이 액션을 트리거 하도록 설정할 수 있습니다.
 
 ## 기능
 
